@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next'
 import en from '@locales/en'
 import th from '@locales/th'
 
-export const defaultNS = 'base'
+export const defaultNS = 'common'
 export const resources = {
   en,
   th,

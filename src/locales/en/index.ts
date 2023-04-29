@@ -1,3 +1,4 @@
-import base from './base.json'
+import common from './common.json'
+import home from './home.json'
 
-export default { base }
+export default { common, home }

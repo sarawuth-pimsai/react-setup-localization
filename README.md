@@ -1,4 +1,4 @@
-# Setup Localization
+# Setup Localization (Multi Namespace)
 
 ## Setup Project
 
@@ -20,10 +20,12 @@ src
   - i18next.d.ts
 - locales
   - en
-    - base.json
+    - common.json
+    - home.json
     - index.ts
   - th
-    - base.json
+    - common.json
+    - home.json
     - index.ts
   i18n.ts
 ```
@@ -32,7 +34,7 @@ src
 
 ```
 import i18next from 'i18next'
-import { defaultNS, resources } from '../locales/i18n'
+import { defaultNS, resources } from '@locales/i18n'
 
 declare module 'i18next' {
   interface CustomTypeOptions {
@@ -52,7 +54,7 @@ import { initReactI18next } from 'react-i18next'
 import en from '@locales/en'
 import th from '@locales/th'
 
-export const defaultNS = 'base'
+export const defaultNS = 'common'
 export const resources = {
   en,
   th,
@@ -69,12 +71,13 @@ i18next.use(initReactI18next).init({
 ### index.ts (locales/en/index.ts, locales/th/index.ts)
 
 ```
-import base from './base.json'
+import common from './common.json'
+import home from './home.json'
 
-export default { base }
+export default { common, home }
 ```
 
-### base.json (locales/en/base.json, locales/th/base.json)
+### common.json (locales/en/common.json, locales/th/common.json)
 
 ```
 {
