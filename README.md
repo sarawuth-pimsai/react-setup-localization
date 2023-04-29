@@ -12,7 +12,7 @@ yarn create vite
 yarn add i18next react-i18next
 ```
 
-## Directory Structure
+### Directory Structure
 
 ```
 src
